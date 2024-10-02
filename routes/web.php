@@ -14,11 +14,8 @@ use App\Http\Controllers\PesertaController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/crud', [PesertaController::class, 'index'])->name('crud');
+Route::get('/', [PesertaController::class, 'index'])->name('crud');
 
 Route::get('/tambahpeserta', [PesertaController::class, 'tambahpeserta'])->name('tambahpeserta');
 Route::post('/insertdata', [PesertaController::class, 'insertdata'])->name('insertdata');
